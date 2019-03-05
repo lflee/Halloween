@@ -1,5 +1,9 @@
 html, body {
-    background: darkmagenta;
-    height: 100%;
-    font-family: 'Cinzel', serif;
-  }
+  background: black;
+  height: 100%;
+  font-family: 'Cinzel', serif;
+  font-size: 15vw;
+  color: white ;
+  -webkit-text-stroke: 1px orange;
+  text-align: center;
+}
