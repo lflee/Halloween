@@ -1,18 +1,17 @@
-var context = new AudioContext(),
-  oscillator = null;
-
-document.body.addEventListener('mousedown', function () {
-  oscillator = context.createOscillator();
-  oscillator.connect(context.destination);
-  oscillator.start(context.currentTime);
-});
-
-document.body.addEventListener('mouseup', function () {
-  oscillator.stop(context.currentTime);
-  oscillator.disconnect();
-});
-
 function play() {
+
+    var context = new AudioContext(), oscillator = null;
+
+    document.body.addEventListener('mousedown', function () {
+      oscillator = context.createOscillator();
+      oscillator.connect(context.destination);
+      oscillator.start(context.currentTime);
+    });
+
+    document.body.addEventListener('mouseup', function () {
+      oscillator.stop(context.currentTime);
+      oscillator.disconnect();
+    });
     
     var synth = new Tone.Synth().toMaster()
     
